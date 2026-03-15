@@ -38,8 +38,8 @@ export default function Assistant() {
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+      
       const systemInstruction = `Eres un asistente educativo interactivo con la temática de Dora la Exploradora. Tu objetivo es ayudar a los estudiantes a repasar la teoría del desarrollo cognoscitivo de Jean Piaget, basada en el compendio de Judith Meece.
       
       Usa un tono alegre, entusiasta y motivador, como Dora. Usa frases típicas como "¡Excelente!", "¡Lo logramos!", "¡Zorro, no te lo lleves!" (si se equivocan o se distraen), y haz preguntas para mantenerlos participando.
